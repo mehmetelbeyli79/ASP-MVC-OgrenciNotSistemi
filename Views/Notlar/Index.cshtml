@@ -1,0 +1,33 @@
+﻿@using OgrenciNotMvc.Models.EntityFramework
+@model List<TBLNOTLAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table class="table table-bordered">
+    <tr>
+        <th>NOT DERSID</th>
+        <th>NOT OGRID</th>
+        <th>SINAV1</th>
+        <th>SINAV2</th>
+        <th>SINAV3</th>
+        <th>ORTALAMA</th>
+        <th>DURUM</th>
+    </tr>
+    <tbody>
+        @foreach (var not in Model)
+        {
+            <tr>
+                <td>@not.DERSID</td>
+                <td>@not.OGRID</td>
+                <td>@not.SINAV1</td>
+                <td>@not.SINAV2</td>
+                <td>@not.SINAV3</td>
+                <td>@not.ORTALAMA</td>
+                <td>@not.DURUM</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
